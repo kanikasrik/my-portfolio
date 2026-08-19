@@ -1,306 +1,706 @@
-html{
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
     scroll-behavior: smooth;
 }
+
 body {
-    font-family: arial, sans-serif;
-    text-align: center;
-    font-family: arial, sans-serif;  
-    text-align: center;
-    background-color: #f5f5f5;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: #090D16;
+    color: #94A3B8;
+    line-height: 1.7;
 }
-h1 { 
-    color:#333;
-    font-size: 40px;
-}
-p{
-    color: #555;
-    font-size: 18px;
-}
-button {
-    padding: 12px 25px;
-    font-size: 16px;
-    border-radius: 8px;
-    cursor: pointer;
-}
-.project-card {
-    border: 2px solid black;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-}
-nav {
-    text-align: center;
-    padding: 20px;
-}
-nav a {
-    text-decoration: none;
-    margin: 15px;
-    font-size: 18px;
-    font-weight: bold;
-}
-h1 {
-    font-size: 45px;
-    margin-top: 40px
-}
-button{
-    padding: 12px;
-    font-size: 18px;
-    border-radius: 8px;
-    border: none;
-}
-section {
-    margin: 50px auto;
-    width: 80%;
-}
-button {
-    padding: 12px 30px;
-    font-size: 18px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-footer {
-    margin-top: 50px;
-    padding: 20px;
-    border-top: 2px solid black;
-    text-align: center;
-}
-h2 {
-    font-size:  30px;
-    margin-bottom: 20px;
-}
-.project.card {
-    border: 2px solid black;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    box-shadow: 5px 5px 10px gray;
-    transition: 0.3s;
-}
-.project-card:hover {
-    transform: scale(1.03);
-    box-shadow: 0px 15px 35px black;
-}
-.skill {
-    display: inline-block;
-    border: 2px solid black;
-    padding: 10px 20px;
-    margin: 10px;
-    border-radius: 8px;
-}
-.skill:hover {
-    transform: scale(1.1);
-    cursor: pointer ;
-}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
 nav {
     position: sticky;
     top: 0;
-    backround: white;
-    padding: 15px;
-}
-#projects {
-    padding: 40px;
-    text-align: center;
-}
-.project-card{
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-.project-card h3{
-    color: #0077cc;
-}
-#contact{
-    text-align: center;
-    padding:40px;
-}
-#contact a {
-    color: #0077cc;
-    text-decoration: none;
-    font-weight: bold;
-}
-#contact a:hover {
-    text-decoration: underline;
-}
-html{
-    scroll-behavior: smooth;
-}
-body {
-    margin:0;
-    font-family: arial, sans-serif;
-    background-color: #f4f4f4;
-}
-#home {
-    background: linear-gradient(135deg, #0077cc, #oob4d8);
-    color:black;
-    text-align: center;
-    padding: 80px 20px;
-}
-#home h1{
-    font-size: 45px;
-}
-#home p {
-    font-size: 45px;
-    margin-top: 20px;
-}
-button {
-    background: white;
-    color: #0077cc;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 16px;
-}
-button:hover {
-    background: #0077cc;
-    color: black;
-}
-img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    border: 4px solid #0077cc;
-    object-fit: cover;
-    margin-top: 20px;
-}
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 30px;
+    z-index: 1000;
 
+    background: #090D16;
+    padding: 18px;
+
+    text-align: center;
+
+    border-bottom: 1px solid #1E293B;
 }
-#home img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid white;
-    margin-top: 20px;
+
+nav a {
+    color: #F8FAFC;
+    text-decoration: none;
+
+    margin: 0 15px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.3s;
 }
-footer {
-    background:#333;
-    color:white;
-    text-align:center;
-    padding:15px;
-    margin-top:30px;
+
+nav a:hover {
+    color: #10B981;
 }
+
+nav a.active {
+    color: #10B981;
+    border-bottom: 2px solid #10B981;
+}
+
+nav button {
+    background: #10B981;
+    color: #090D16;
+
+    border: none;
+    padding: 8px 15px;
+
+    border-radius: 6px;
+
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+/* =========================
+   HOME
+========================= */
+
 #home {
-    display:flex;
+    width: 100%;
+    max-width: none;
+
+    min-height: 100vh;
+
+    margin: 0;
+
+    padding: 60px 20px;
+
+    display: flex;
     flex-direction: column;
+
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+
     text-align: center;
+
+    background: #090D16;
 }
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 4px solid #10B981;
+
+    transition: 0.3s;
+}
+
+.profile-img:hover {
+    transform: scale(1.08);
+}
+
+#home h1 {
+    margin-top: 25px;
+
+    font-size: 48px;
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.02em;
+
+    color: #F8FAFC;
+}
+
+#home p {
+    margin-top: 12px;
+
+    color: #94A3B8;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+    background: #10B981;
+
+    color: #090D16;
+
+    border: none;
+
+    padding: 12px 24px;
+
+    border-radius: 8px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #6366F1;
+
+    color: #FFFFFF;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 70px auto;
+}
+
+section h2 {
+    font-size: 30px;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    color: #F8FAFC;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+#about {
+    padding: 50px 20px;
+}
+
+#about p {
+    color: #94A3B8;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
 #skills {
-    text-align: center;
-    padding: 40px;
+    padding: 50px 20px;
 }
-.skills {
-    display: inline-block;
-    background: #0077cc;
-    color: white;
-    padding: 10px 20px;
-    margin: 10px;
-    border-radius: 20px;
-    font-weight: bold;
+
+#skills p {
+    color: #94A3B8;
+
+    margin-top: 15px;
 }
+
+progress {
+    width: 100%;
+
+    height: 10px;
+
+    accent-color: #10B981;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   PROJECTS + MY JOURNEY
+========================= */
+
+.projects-journey {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 70px auto;
+
+    display: flex;
+
+    gap: 70px;
+
+    align-items: flex-start;
+}
+
+.projects-journey #projects {
+    flex: 1;
+
+    width: auto;
+    margin: 0;
+}
+
+.projects-journey #stats {
+    flex: 1;
+
+    width: auto;
+    margin: 0;
+}
+
+
+/* =========================
+   PROJECT CARDS
+========================= */
+
 .project-card {
-    background: white;
+    background: #111827;
+
+    border: 1px solid #1E293B;
+
+    border-left: 4px solid #10B981;
+
     border-radius: 12px;
-    padding: 20px;
-    margin:20px;
-    width:80%;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    transition: transform 0.3s;
+
+    padding: 22px;
+
+    margin: 20px 0;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+
+    transition: 0.3s;
 }
 
 .project-card:hover {
-    transform: scale(1.03);
+    transform: translateY(-5px);
+
+    border-color: #10B981;
 }
-footer {
-    background-color:#222;
-    color:white;
-    text-align: center;
-    padding:20px;
-    margin-top:40px;
-    font-size: 16px;
+
+.project-card h3 {
+    font-size: 22px;
+
+    font-weight: 600;
+
+    color: #F8FAFC;
+
+    margin-bottom: 10px;
 }
-button {
-    transiston: 0.3s;
+
+.project-card p {
+    color: #FFFFFF;
+
+    font-size: 15px;
 }
-button:hover { 
-    transform: scale(1.05);
+
+
+/* =========================
+   TECH TAGS
+========================= */
+
+.tech span {
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    margin: 8px 5px 5px 0;
+
+    border-radius: 15px;
+
+    background: #172033;
+
+    color: #10B981;
+
+    border: 1px solid #10B981;
+
+    font-size: 13px;
+
+    font-weight: 600;
 }
-nav a {
-    transition :0.3s;
+
+
+/* =========================
+   MY JOURNEY
+========================= */
+
+.start-container {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
 }
-nave a:hover {
-    color: yellow;
-}
-.skill {
-    display:inline-block;
-    background-color: #0077cc;
-    color: white;
-    padding: 10px 20px;
-    margin: 8px;
-    border-radius: 20px;
-    font-weight: bold;
+
+.start-card {
+    background: #111827;
+
+    border: 1px solid #1E293B;
+
+    border-left: 4px solid #6366F1;
+
+    border-radius: 12px;
+
+    padding: 22px;
+
     transition: 0.3s;
 }
-#certifications h2 {
-    font-size: 32px;
+
+.start-card:hover {
+    transform: translateX(6px);
+
+    border-color: #6366F1;
 }
+
+.start-card h3 {
+    font-size: 28px;
+
+    color: #6366F1;
+}
+
+.start-card p {
+    color: #FFFFFF;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   LEARNING JOURNEY
+========================= */
+
+#journey {
+    text-align: center;
+
+    padding: 60px 20px;
+}
+
+.timeline-item {
+    background: #111827;
+
+    max-width: 700px;
+
+    margin: 20px auto;
+
+    padding: 22px;
+
+    border-left: 4px solid #10B981;
+
+    border-radius: 10px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.timeline-item h3 {
+    color: #10B981;
+
+    font-size: 20px;
+
+    margin-bottom: 10px;
+}
+
+.timeline-item p {
+    color: #FFFFFF;
+}
+
+
+/* =========================
+   CERTIFICATIONS
+========================= */
+
+#certification {
+    padding: 60px 20px;
+}
+
+.certificate {
+    background: #111827;
+
+    border-left: 4px solid #10B981;
+
+    padding: 20px;
+
+    margin: 20px auto;
+
+    max-width: 700px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+
+    transition: 0.3s;
+}
+
+.certificate:hover {
+    transform: translateY(-5px);
+
+    border-color: #6366F1;
+}
+
 .certificate h3 {
-    font-size: 22px;
+    color: #F8FAFC;
+
+    font-size: 20px;
 }
+
 .certificate p {
-    font-size: 16px;
+    color: #94A3B8;
 }
-body{
-    font-family: arial, sans-serif;
-    background:#f5f7fa;
-    color:#333;
-    margin:0;
+
+
+/* =========================
+   CONTACT
+========================= */
+
+#contact {
+    text-align: center;
+
+    padding: 60px 20px;
 }
-section{
-    padding:60px 20px;
-    text-align:center;
+
+#contact p {
+    color: #94A3B8;
+
+    margin: 12px 0;
 }
-h1,h2{
-    color:#0d47a1;
+
+#contact a {
+    color: #10B981;
+
+    text-decoration: none;
 }
-button{
-    background:#0d47a1;
-    color:white;
-    border:none;
-    padding:12px 20px;
-    border-radius:8px;
-    cursor:pointer;
+
+#contact a:hover {
+    color: #6366F1;
 }
-button:hover{
-    background:#1565c0;
+
+#contactForm {
+    max-width: 500px;
+
+    margin: 30px auto;
 }
-#skills u1{
-    list-style:none;
-    padding:10px;
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    margin: 10px 0;
+
+    background: #111827;
+
+    color: #FFFFFF;
+
+    border: 1px solid #334155;
+
+    border-radius: 8px;
+
+    font-size: 15px;
 }
-#skills 1i{
-    display:inline-block;
-    margin:10px;
-    padding:10px 20px;
-    background:#0d47a1;
-    color:white;
-    border-radius:20px;
+
+#contactForm input::placeholder,
+#contactForm textarea::placeholder {
+    color: #64748B;
 }
-button{
-    margin-top:20px;
+
+#contactForm textarea {
+    resize: vertical;
+
+    min-height: 120px;
+}
+
+#contactForm button {
+    width: 100%;
+}
+
+
+/* =========================
+   PROGRESS BAR
+========================= */
+
+#progressBar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 0%;
+
+    height: 5px;
+
+    background: #10B981;
+
+    z-index: 9999;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #060910;
+
+    color: #F8FAFC;
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 40px;
+}
+
+footer p {
+    color: #F8FAFC;
+}
+
+
+/* =========================
+   BACK TO TOP
+========================= */
+
+#topBtn {
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    background: #10B981;
+
+    color: #090D16;
+
+    padding: 10px 18px;
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+section {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    nav a {
+        display: block;
+
+        margin: 10px 0;
+    }
+
+    #home h1 {
+        font-size: 34px;
+    }
+
+    .projects-journey {
+        flex-direction: column;
+
+        gap: 40px;
+    }
+
+    .projects-journey #projects,
+    .projects-journey #stats {
+        width: 100%;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    section h2 {
+        font-size: 26px;
+    }
+}
+/* ===== BIG & CLEAR TEXT ===== */
+
+body {
+    font-size: 18px;
+}
+
+/* Navigation */
+nav a {
+    font-size: 18px;
+}
+
+/* Home */
+#home h1 {
+    font-size: 56px !important;
+}
+
+#home p {
+    font-size: 20px !important;
+}
+
+/* Section headings */
+section h2 {
+    font-size: 38px !important;
+}
+
+/* Card headings */
+.project-card h3,
+.start-card h3,
+.timeline-item h3,
+.certificate h3 {
+    font-size: 25px !important;
+}
+
+/* All content */
+#about p,
+#skills p,
+.project-card p,
+.start-card p,
+.timeline-item p,
+.certificate p,
+#contact p {
+    font-size: 18px !important;
+}
+
+/* Skill percentage */
+progress {
+    height: 14px;
+}
+
+/* Buttons */
+button {
+    font-size: 17px;
+    padding: 14px 28px;
+}
+#home a {
+    margin-bottom: 25px;
 }
